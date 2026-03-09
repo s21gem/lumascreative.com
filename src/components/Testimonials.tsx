@@ -47,16 +47,17 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="w-full lg:w-1/2 relative group rounded-3xl overflow-hidden aspect-video bg-zinc-200 dark:bg-zinc-900"
+                tabIndex={0}
+                className="w-full lg:w-1/2 relative group rounded-3xl overflow-hidden aspect-video bg-zinc-200 dark:bg-zinc-900 focus:outline-none cursor-pointer"
               >
                 <img
                   src={testimonial.videoThumb}
                   alt={`${testimonial.name} Testimonial`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105 group-focus:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 group-active:bg-black/40 transition-colors duration-500 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-cyan-400/90 backdrop-blur-sm flex items-center justify-center text-black shadow-xl transform group-hover:scale-110 group-active:scale-110 transition-transform duration-300 cursor-pointer">
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 group-active:bg-black/40 group-focus:bg-black/40 transition-colors duration-500 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-cyan-400/90 backdrop-blur-sm flex items-center justify-center text-black shadow-xl transform group-hover:scale-110 group-active:scale-110 group-focus:scale-110 transition-transform duration-300 cursor-pointer">
                     <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>

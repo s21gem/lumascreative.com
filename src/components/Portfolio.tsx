@@ -107,21 +107,22 @@ export default function Portfolio() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer bg-zinc-100 dark:bg-zinc-900"
+                tabIndex={0}
+                className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer bg-zinc-100 dark:bg-zinc-900 focus:outline-none"
               >
                 {/* Thumbnail Image */}
                 <img 
                   src={item.thumbnail} 
                   alt={item.title} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105 group-focus:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 
                 {/* Video on Hover (Simulated with image for now, but could be actual video) */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 group-active:bg-black/70 transition-colors duration-500 z-10" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 group-active:bg-black/70 group-focus:bg-black/70 transition-colors duration-500 z-10" />
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 group-active:translate-y-0">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 group-active:translate-y-0 group-focus:translate-y-0">
                   <span className="text-cyan-400 text-sm font-bold tracking-wider uppercase mb-2">
                     {item.client}
                   </span>

@@ -58,9 +58,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-zinc-50 dark:bg-zinc-900/50 border border-black/5 dark:border-white/5 hover:border-cyan-400/30 active:border-cyan-400/30 p-8 rounded-2xl transition-colors duration-300"
+              tabIndex={0}
+              className="group bg-zinc-50 dark:bg-zinc-900/50 border border-black/5 dark:border-white/5 hover:border-cyan-400/30 active:border-cyan-400/30 focus:border-cyan-400/30 focus:outline-none cursor-pointer p-8 rounded-2xl transition-colors duration-300"
             >
-              <div className="w-16 h-16 bg-white dark:bg-black rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-active:scale-110 transition-transform duration-300 shadow-inner shadow-black/5 dark:shadow-white/5">
+              <div className="w-16 h-16 bg-white dark:bg-black rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-active:scale-110 group-focus:scale-110 transition-transform duration-300 shadow-inner shadow-black/5 dark:shadow-white/5">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold text-black dark:text-white mb-4">{service.title}</h3>

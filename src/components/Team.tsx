@@ -110,13 +110,14 @@ export default function Team() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="relative w-full max-w-[280px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-black/10 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 shadow-2xl group"
+              tabIndex={0}
+              className="relative w-full max-w-[280px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-black/10 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 shadow-2xl group focus:outline-none cursor-pointer"
               style={{ rotateZ: rotation }}
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 group-focus:grayscale-0 transition-all duration-500"
                 referrerPolicy="no-referrer"
               />
               
@@ -150,7 +151,8 @@ export default function Team() {
               return (
                 <div
                   key={member.id}
-                  className="absolute inset-0 rounded-3xl overflow-hidden border-2 border-black/10 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 carousel-card group shadow-2xl"
+                  tabIndex={0}
+                  className="absolute inset-0 rounded-3xl overflow-hidden border-2 border-black/10 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 carousel-card group shadow-2xl focus:outline-none cursor-pointer"
                   style={{
                     transform: `rotateY(${angle}deg) translateZ(var(--tz)) translateY(${yOffset}px) rotateZ(${rotation}deg)`,
                     backfaceVisibility: 'visible',
@@ -159,12 +161,12 @@ export default function Team() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 group-focus:grayscale-0 transition-all duration-500"
                     referrerPolicy="no-referrer"
                   />
                   
                   {/* Overlay Info */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
                     <p className="text-cyan-400 text-sm font-medium">{member.role}</p>
                   </div>
