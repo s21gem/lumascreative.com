@@ -52,15 +52,15 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="relative flex flex-col items-center text-center group"
+                className="relative flex flex-col items-center text-center group active:scale-[0.98] transition-transform duration-300"
               >
                 {/* Number Badge */}
-                <div className="absolute -top-6 -left-4 lg:-left-2 text-6xl font-black text-black/5 dark:text-white/5 group-hover:text-cyan-400/10 transition-colors duration-500 pointer-events-none">
+                <div className="absolute -top-6 -left-4 lg:-left-2 text-6xl font-black text-black/5 dark:text-white/5 group-hover:text-cyan-400/10 group-active:text-cyan-400/10 transition-colors duration-500 pointer-events-none">
                   {step.number}
                 </div>
 
                 {/* Icon Circle */}
-                <div className="w-20 h-20 rounded-full bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-800 flex items-center justify-center mb-8 group-hover:border-cyan-400 transition-colors duration-300 shadow-xl relative z-10">
+                <div className="w-20 h-20 rounded-full bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-800 flex items-center justify-center mb-8 group-hover:border-cyan-400 group-active:border-cyan-400 transition-colors duration-300 shadow-xl relative z-10">
                   {step.icon}
                 </div>
 

@@ -87,7 +87,7 @@ export default function Portfolio() {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === category 
                     ? 'bg-cyan-400 text-black shadow-[0_0_10px_rgba(34,211,238,0.4)]' 
-                    : 'bg-black/5 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-black/10 dark:hover:bg-white/10 hover:text-black dark:hover:text-white'
+                    : 'bg-black/5 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-black/10 active:bg-black/10 dark:hover:bg-white/10 dark:active:bg-white/10 hover:text-black active:text-black dark:hover:text-white dark:active:text-white'
                 }`}
               >
                 {category}
@@ -113,15 +113,15 @@ export default function Portfolio() {
                 <img 
                   src={item.thumbnail} 
                   alt={item.title} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-active:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 
                 {/* Video on Hover (Simulated with image for now, but could be actual video) */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 transition-colors duration-500 z-10" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/70 group-active:bg-black/70 transition-colors duration-500 z-10" />
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">
+                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0 group-active:translate-y-0">
                   <span className="text-cyan-400 text-sm font-bold tracking-wider uppercase mb-2">
                     {item.client}
                   </span>

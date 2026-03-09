@@ -26,8 +26,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="hover:opacity-80 transition-opacity">
-          <Logo className="h-8 md:h-10" />
+        <a href="#home" className="hover:opacity-80 active:opacity-80 transition-opacity">
+          <Logo className="h-12 md:h-16" />
         </a>
 
         {/* Desktop Nav */}
@@ -36,7 +36,7 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
+              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 active:text-cyan-500 dark:hover:text-cyan-400 dark:active:text-cyan-400 transition-colors"
             >
               {link}
             </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-4">
           <ThemeToggle />
           <button
-            className="text-black dark:text-white"
+            className="text-black dark:text-white active:scale-95 transition-transform"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -72,7 +72,7 @@ export default function Navbar() {
               key={link}
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
+              className="text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-cyan-500 active:text-cyan-500 dark:hover:text-cyan-400 dark:active:text-cyan-400 transition-colors"
             >
               {link}
             </a>

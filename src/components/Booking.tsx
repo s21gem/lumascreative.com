@@ -72,19 +72,19 @@ export default function Booking() {
             <h3 className="text-2xl font-bold text-black dark:text-white mb-8">Direct Contact</h3>
             
             <div className="flex flex-col gap-6 mb-12">
-              <button className="flex items-center gap-4 w-full bg-black dark:bg-white text-white dark:text-black font-semibold py-4 px-6 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors group">
-                <Calendar className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <button className="flex items-center gap-4 w-full bg-black dark:bg-white text-white dark:text-black font-semibold py-4 px-6 rounded-xl hover:bg-gray-800 active:bg-gray-800 dark:hover:bg-gray-200 dark:active:bg-gray-200 transition-colors group">
+                <Calendar className="w-6 h-6 group-hover:scale-110 group-active:scale-110 transition-transform" />
                 <span>Book via Calendly</span>
               </button>
               
-              <button className="flex items-center gap-4 w-full bg-[#25D366] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#20bd5a] transition-colors group">
-                <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <button className="flex items-center gap-4 w-full bg-[#25D366] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#20bd5a] active:bg-[#20bd5a] transition-colors group">
+                <MessageCircle className="w-6 h-6 group-hover:scale-110 group-active:scale-110 transition-transform" />
                 <span>Chat on WhatsApp</span>
               </button>
             </div>
 
             <div className="flex flex-col gap-6 pt-8 border-t border-black/10 dark:border-white/10">
-              <a href="tel:+1234567890" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+              <a href="tel:+1234567890" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-cyan-500 active:text-cyan-500 dark:hover:text-cyan-400 dark:active:text-cyan-400 transition-colors">
                 <div className="w-12 h-12 rounded-full bg-white dark:bg-black flex items-center justify-center border border-black/5 dark:border-white/5">
                   <Phone className="w-5 h-5" />
                 </div>
@@ -94,7 +94,7 @@ export default function Booking() {
                 </div>
               </a>
               
-              <a href="mailto:hello@lumascreative.com" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">
+              <a href="mailto:hello@lumascreative.com" className="flex items-center gap-4 text-gray-600 dark:text-gray-400 hover:text-cyan-500 active:text-cyan-500 dark:hover:text-cyan-400 dark:active:text-cyan-400 transition-colors">
                 <div className="w-12 h-12 rounded-full bg-white dark:bg-black flex items-center justify-center border border-black/5 dark:border-white/5">
                   <Mail className="w-5 h-5" />
                 </div>

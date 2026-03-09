@@ -116,7 +116,7 @@ export default function Team() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500"
                 referrerPolicy="no-referrer"
               />
               

@@ -13,7 +13,7 @@ export default function CTAButton({ text, onClick, className = '' }: CTAButtonPr
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
-      className={`bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold py-3 px-8 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:shadow-[0_0_25px_rgba(217,70,239,0.6)] transition-shadow duration-300 ${className}`}
+      className={`bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold py-3 px-8 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:shadow-[0_0_25px_rgba(217,70,239,0.6)] active:shadow-[0_0_25px_rgba(217,70,239,0.6)] transition-shadow duration-300 ${className}`}
     >
       {text}
     </motion.button>
